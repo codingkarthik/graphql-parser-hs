@@ -101,7 +101,7 @@ import {-# SOURCE #-} Language.GraphQL.Draft.Parser  (parseExecutableDoc)
 import {-# SOURCE #-} Language.GraphQL.Draft.Printer (renderExecutableDoc)
 
 newtype Name = Name { unName :: Text }
-  deriving (Eq, Ord, Show, Hashable, Lift, Semigroup, J.ToJSONKey, J.ToJSON)
+  deriving (Eq, Ord, Show, Hashable, Lift, Semigroup, J.ToJSONKey, J.ToJSON, Generic)
 
 instance Pretty Name where
   pretty = pretty. unName
